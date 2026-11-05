@@ -1,0 +1,25 @@
+\begin{table}[!t]
+\centering
+\caption{Control accuracy of LQR gains on the light plant with
+$Q=\operatorname{diag}(10,1)$ and $R=0.1$.
+Each method estimates parameters at $P_m=0.5$ from each of the ten
+$\sigma=0.05$ data sets in Table~\ref{tab:noise_realizations}:
+five noise draws, each used for both multiplicative and additive noise.
+Each estimate $(\hat M,\hat D)$ is then used to design LQR gains at
+$P_m\in\{0.2,0.4,0.5,0.6,0.8\}$, which are compared with
+the corresponding true gains $K^*$.
+Each row reports the mean $\pm$ standard deviation over these
+$10\times5=50$ cases.}
+\label{tab:op-seed}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccc}
+\toprule
+Method & $\epsilon_K$ & $\Delta J/J^*$ & $e_c$ \\
+\midrule
+DP & $(9.9\pm8.1){\cdot}10^{-5}$ & $(6.7\pm7.9){\cdot}10^{-8}$ & $(2.0\pm1.6){\cdot}10^{-4}$ \\
+PINN & $(2.6\pm2.1){\cdot}10^{-5}$ & $(4.5\pm5.7){\cdot}10^{-9}$ & $(5.2\pm4.1){\cdot}10^{-5}$ \\
+OE & $(1.9\pm1.3){\cdot}10^{-5}$ & $(2.2\pm2.3){\cdot}10^{-9}$ & $(3.8\pm2.6){\cdot}10^{-5}$ \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,27 @@
+\begin{table*}[!t]
+\centering
+\footnotesize
+\caption{Median errors of the unconstrained (NODE) and structured NODEs at $R=0.1$. Starts: MS, measured segment starts with $m=10$; ES, estimated segment starts. Cases: seeds $\times$ data sets $\times$ drives. Every gain stabilizes the true linearized system, and every nonlinear simulation completes.}
+\label{tab:r2-structure}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccccc}
+\toprule
+ & & & & & \multicolumn{4}{c}{Median (\%)} \\
+\cmidrule(lr){6-9}
+Plant & Model & Starts & $\sigma$ & Cases & $\epsilon_{A,\mathrm{phys}}$ & $\epsilon_K$ & $\Delta J/J^*$ & $e_c$ \\
+\midrule
+light & NODE & MS & 0.0 & 25 & 9.12 & 1.32 & 0.00968 & 1.03 \\
+light & Structured NODE & MS & 0.0 & 25 & 9.31 & 0.815 & 0.00463 & 0.692 \\
+light & NODE & MS & 0.05 & 75 & 29.6 & 23.1 & 5.22 & 24.8 \\
+light & Structured NODE & MS & 0.05 & 75 & 23.4 & 1.24 & 0.0114 & 1.09 \\
+light & NODE & ES & 0.05 & 75 & 7.44 & 1.61 & 0.0119 & 1.1 \\
+light & Structured NODE & ES & 0.05 & 75 & 2.68 & 1.01 & 0.0111 & 1.07 \\
+primary & NODE & MS & 0.0 & 35 & 2.81 & 0.543 & 0.00637 & 0.793 \\
+primary & Structured NODE & MS & 0.0 & 35 & 2.44 & 0.134 & 0.000596 & 0.242 \\
+primary & NODE & MS & 0.05 & 175 & 7.03 & 16.7 & 19.8 & 50.4 \\
+primary & Structured NODE & MS & 0.05 & 175 & 5.54 & 0.268 & 0.00194 & 0.437 \\
+primary & NODE & ES & 0.05 & 175 & 2.93 & 0.746 & 0.0161 & 1.27 \\
+primary & Structured NODE & ES & 0.05 & 175 & 3.41 & 0.149 & 0.000781 & 0.277 \\
+\bottomrule
+\end{tabular}
+\end{table*}
